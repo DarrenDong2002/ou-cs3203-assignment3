@@ -66,8 +66,13 @@ int main()
     {
         cout << arr[i] << endl;
 
-    }
+        //cout << "need to make changes" << endl;
 
+
+
+    }
+    //cout << "part10" << endl;
+    // changes made here
     return 0;
 }
 
