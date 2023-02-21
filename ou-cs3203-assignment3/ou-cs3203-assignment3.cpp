@@ -65,7 +65,11 @@ int main()
     for (int i =0; i < size; i++)
     {
         cout << arr[i] << endl;
+
         //cout << "need to make changes" << endl;
+
+
+
     }
     //cout << "part10" << endl;
     // changes made here
