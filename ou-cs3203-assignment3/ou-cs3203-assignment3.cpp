@@ -6,6 +6,11 @@
 
 using namespace std;
 
+void reverseArr(int arr[], int size) 
+{
+    std::reverse(arr, arr + size);
+}
+
 int productArr(int arr[], int size)
 {
     int product = 1; 
@@ -40,7 +45,8 @@ int main()
     cin >> size;
     cout << "enter array data and press enter: " << endl;
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) 
+    {
         cin >> data;
         arr[i] = data;
     }
@@ -49,9 +55,16 @@ int main()
     int sumOfArr = sumArr(arr, size);
     // product method
     int productOfArr = productArr(arr, size);
+    // reverse method
+    reverseArr(arr, size);
 
     cout << "sum of arr array: " << sumOfArr << endl;
     cout << "product of arr array: " << productOfArr << endl;
+    cout << " reverse of arr array: " << endl;
+    for (int i =0; i < size; i++)
+    {
+        cout << arr[i] << endl;
+    }
 
     return 0;
 }
