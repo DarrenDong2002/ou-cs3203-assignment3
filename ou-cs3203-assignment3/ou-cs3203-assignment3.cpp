@@ -25,6 +25,7 @@ int sumArr(int arr[], int size)
     int sum = 0;
     for (int i = 0; i < size; i++)
     {
+
         sum += arr[i];
     }
     return sum;
@@ -60,10 +61,11 @@ int main()
 
     cout << "sum of arr array: " << sumOfArr << endl;
     cout << "product of arr array: " << productOfArr << endl;
-    cout << " reverse of arr array: " << endl;
+    cout << "reverse of arr array: " << endl;
     for (int i =0; i < size; i++)
     {
         cout << arr[i] << endl;
+
     }
 
     return 0;
