@@ -2,10 +2,20 @@
 //
 
 #include <iostream>
-
 #include <stdio.h>
 
-int sum(int arr[], int size) 
+using namespace std;
+
+int productArr(int arr[], int size)
+{
+    int product = 1; 
+    for (int i = 0; i < size; i++)
+    {
+        product *= arr[i];
+    }
+    return product;
+}
+int sumArr(int arr[], int size) 
 {
     int sum = 0;
     for (int i = 0; i < size; i++)
@@ -15,16 +25,33 @@ int sum(int arr[], int size)
     return sum;
 }
 
-
 int main()
 {
     //std::cout << "Hello World!\n";
-    
-    int arr[] = {10, 12, 14, 25};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int sumOfArr = sum(arr, size);
+    // our test array and its size
+    //int bday[] = {10, 12, 14, 25};
+    // int size = sizeof(arr) / sizeof(arr[0]);
+    //
+    // user input array and size
+    int arr[100];
+    int size;
+    int data;
+    cout << "enter size: ";
+    cin >> size;
+    cout << "enter array data and press enter: " << endl;
 
-    printf("sum of arr array: %d\n", sumOfArr);
+    for (int i = 0; i < size; i++) {
+        cin >> data;
+        arr[i] = data;
+    }
+
+    // sum method
+    int sumOfArr = sumArr(arr, size);
+    // product method
+    int productOfArr = productArr(arr, size);
+
+    cout << "sum of arr array: " << sumOfArr << endl;
+    cout << "product of arr array: " << productOfArr << endl;
 
     return 0;
 }
